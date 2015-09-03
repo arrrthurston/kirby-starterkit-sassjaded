@@ -10,6 +10,6 @@
 /thumbs/*
 /site/cache/*
 
-# Dev
+# Project
 /_design
 /_admin
