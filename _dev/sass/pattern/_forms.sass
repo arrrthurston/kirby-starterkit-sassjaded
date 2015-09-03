@@ -1,0 +1,91 @@
+// fieldset
+//   background: lighten($border_clr, 10)
+//   border: 1px solid $border_clr
+//   margin: 0 0 $blh / 2 0
+//   padding: $blh
+// .contact_form
+
+
+fieldset
+  // background: lighten($border_clr, 10)
+  border: none
+  padding: 0 $blh*.125
+  margin: 0
+  // margin: 0 0 $blh / 2 0
+  // padding: $blh
+
+
+input, label, select
+  display: block
+  font-family: $form-font-family
+  font-size: $form-font-size
+  
+
+label
+  font-weight: $font_medium
+  margin-bottom: $blh*.125
+  
+  &.required:after
+    content: "*"
+  abbr
+    display: none
+
+textarea, #{$all-text-inputs}, select[multiple=multiple]
+  +box-sizing(border-box)
+  +transition(border-color)
+  background-color: white
+  border-radius: $form-border-radius
+  border: 1px solid $form-border-color
+  box-shadow: $form-box-shadow
+  font-family: $form-font-family
+  font-size: $form-font-size
+  margin-bottom: $blh / 2
+  padding: $blh / 3 $blh / 3
+  width: 100%
+  &:hover
+    border-color: $form-border-color-hover
+  &:focus
+    border-color: $form-border-color-focus
+    box-shadow: $form-box-shadow-focus
+    outline: none
+
+textarea
+  resize: vertical
+
+input[type="search"]
+  +appearance(none)
+
+input[type="checkbox"], input[type="radio"]
+  display: inline
+  margin-right: $blh / 4
+
+input[type="file"]
+  margin-bottom: $blh / 2
+  padding-bottom: $blh / 3
+  width: 100%
+
+select
+  width: auto
+  max-width: 100%
+  margin-bottom: $blh
+
+// .form-actions
+//   text-align: left
+
+input[type="submit"]
+  padding: $blh*.5 $blh*1.5
+  text-transform: uppercase
+  letter-spacing: $blh*.05
+  margin: 0
+  font-size: $font_lrg
+  background: $clr_hero
+  +trans
+
+  &:hover, &:focus
+    background: $clr_text
+    // box-shadow: 0 2px 1px $clr_hero
+
+  &:active
+    // box-shadow: none
+    background: mix($clr_hero,$clr_text,50%)
+    // box-shadow: 0 2px 1px $clr_hero

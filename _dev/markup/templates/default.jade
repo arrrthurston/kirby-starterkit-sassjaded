@@ -1,0 +1,8 @@
+<?php snippet('header') ?>
+  
+.main(role='main')
+  .text
+    h1 <?php echo $page->title()->html() ?>
+    <?php echo $page->text()->kirbytext() ?>
+
+<?php snippet('footer') ?>
